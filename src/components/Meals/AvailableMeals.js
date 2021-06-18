@@ -3,7 +3,7 @@ import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
 import DUMMY_MEALS from "../../helpers/dummy-meals";
 
-const AvailableMeals = (props) => {
+const AvailableMeals = () => {
   const mealsList = DUMMY_MEALS.map((meal) => (
     <MealItem
       id={meal.id}
@@ -13,6 +13,7 @@ const AvailableMeals = (props) => {
       price={meal.price}
     />
   ));
+
   return (
     <section className={classes.meals}>
       <Card>
